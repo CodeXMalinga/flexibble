@@ -8,7 +8,7 @@ import AuthProviders from './AuthProviders'
 
 const Navbar = () => {
 
-const session = {};
+const session = null;
 
   return (
     <nav className='flexBetween navbar'>

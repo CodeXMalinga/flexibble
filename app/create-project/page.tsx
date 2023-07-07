@@ -1,12 +1,15 @@
 import Modal from '@/components/Modal'
 import ProjectForm from '@/components/ProjectForm'
+import { getCurrentUser } from '@/lib/session'
 
-const CreateProject = () => {
+const CreateProject = async () => {
+
+    const session = await getCurrentUser();
 
   return (
     <Modal>
         <h3 className="modal-head-text">Create a new Project.</h3>
-        <ProjectForm />
+        <ProjectForm type='create' session={session}/>
     </Modal>
   )
 }
